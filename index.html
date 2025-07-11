@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quit_hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Quit_hub</h1>
+        <div id="auth-section">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
+            <button onclick="login()">Login</button>
+            <button onclick="showSignup()">Sign Up</button>
+        </div>
+        <div id="signup-section" style="display:none;">
+            <h2>Sign Up</h2>
+            <input type="text" id="new-username" placeholder="Username" />
+            <input type="password" id="new-password" placeholder="Password" />
+            <button onclick="signup()">Create Account</button>
+            <button onclick="showLogin()">Back to Login</button>
+        </div>
+        <div id="quiz-section" style="display:none;">
+            <h2>Quiz</h2>
+            <p>How often do you feel the urge to watch porn?</p>
+            <input type="number" id="quiz-answer" placeholder="Rate 1-10" />
+            <button onclick="submitQuiz()">Submit</button>
+        </div>
+        <div id="goals-section" style="display:none;">
+            <h2>Welcome, <span id="user-display"></span></h2>
+            <div id="goals"></div>
+            <button onclick="resetStreak()">I gave in to temptation</button>
+            <button onclick="showPanicButton()">Panic Button</button>
+            <div id="streak">Streak: <span id="streak-count">0</span> days</div>
+            <div id="xp">XP: <span id="xp-count">0</span></div>
+        </div>
+        <div id="panic-message" style="display:none;">
+            <h2>Stay Strong!</h2>
+            <p id="motivational-quote"></p>
+            <button onclick="hidePanicButton()">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
